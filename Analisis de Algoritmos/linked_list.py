@@ -1,5 +1,5 @@
 '''
-    Linked list nodo.
+    Linked list.
     Practica Analisis de Algoritmos Computacionales.
     UCASAL. Lic.Ciencia de Datos.
     Alumno: Daniel Andres Wolter.
