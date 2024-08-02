@@ -29,7 +29,15 @@ class Linked_list (object):
 
     def is_empety (self):
         empety = "False" if self.prim == None else "True"
-        print(empety)    
+        print(empety)
+    
+    # Metodo para mostrar lista.
+    
+    def print_list (self):
+        nodo = self.prim
+        while nodo != None :
+            print("Dato:", nodo.dato, "prox:", nodo.prox)
+            nodo = nodo.prox
 
 v3 = Nodo ("Manzanas")
 v2 = Nodo ("Peras", v3)
@@ -47,8 +55,9 @@ lista = v1
 
 linked_list = Linked_list()
 
-linked_list.is_empety
-
 linked_list.add_at_front("Hola")
-
-linked_list.is_empety
+linked_list.add_at_front("Mundo")
+linked_list.add_at_front("!")
+linked_list.add_at_front("!")
+linked_list.add_at_front("!")
+linked_list.print_list()
