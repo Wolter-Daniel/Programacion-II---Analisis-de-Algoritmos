@@ -86,10 +86,10 @@ class Linked_list (object):
         if self.is_empty() == "False":
             count = 0
             while nodo.prox:
-                count = count + 1
+                count += 1
                 nodo = nodo.prox
             else:
-                count = count + 1
+                count += 1
             return count
         else:
             print("Lista vacia")
