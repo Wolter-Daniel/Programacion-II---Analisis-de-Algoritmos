@@ -73,8 +73,8 @@ class Linked_list (object):
 
     def is_empty (self):
         '''Método para verificar si la estructura de datos esta vacia'''
-        empety = "True" if self.prim == None else "False"
-        print(empety)
+        empty = "True" if self.prim == None else "False"
+        return empty
     
 
     def print_list (self):
@@ -87,14 +87,17 @@ class Linked_list (object):
 
     def length (self):
         '''Metodo para obtener cantidad de elementos'''
-        count = 0
         nodo = self.prim
-        while nodo.prox:
-            count = count + 1
-            nodo = nodo.prox
+        if self.is_empty() == "False":
+            count = 0
+            while nodo.prox:
+                count = count + 1
+                nodo = nodo.prox
+            else:
+                count = count + 1
+            return count
         else:
-            count = count + 1
-        return count
+            print("Lista vacia")
 
 v3 = Nodo ("Manzanas")
 v2 = Nodo ("Peras", v3)
@@ -111,7 +114,6 @@ lista = v1
 #_Nodo.verLista(lista)
 
 linked_list = Linked_list()
-
 linked_list.add_at_end("Hola")
 linked_list.add_at_end("Mundo")
 linked_list.add_at_end("!")
