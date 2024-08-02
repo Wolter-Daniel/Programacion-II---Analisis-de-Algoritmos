@@ -3,11 +3,11 @@
     UCASAL. Lic.Ciencia de Datos.
     Alumno: Daniel Andres Wolter.
 '''
-class Nodo (object):
+class _Nodo (object):
+
+    #Constructor
+
     def __init__(self, dato = None, prox = None ):
-
-        #Constructor
-
         self.dato = dato
         self.prox = prox
 
@@ -16,9 +16,9 @@ class Nodo (object):
             print(nodo.dato)
             nodo = nodo.prox
 
-v3 = Nodo ("Manzanas")
-v2 = Nodo ("Peras", v3)
-v1 = Nodo ("Bananas", v2)
+v3 = _Nodo ("Manzanas")
+v2 = _Nodo ("Peras", v3)
+v1 = _Nodo ("Bananas", v2)
 
 #Referencia del principio de la lista.
 
@@ -28,4 +28,4 @@ lista = v1
 #print(v2.dato)
 #print(v3.dato)
 
-Nodo.verLista(lista)
+_Nodo.verLista(lista)
