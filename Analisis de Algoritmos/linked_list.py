@@ -11,9 +11,9 @@ class Nodo (object):
         self.dato = dato
         self.prox = prox
 
-v3 = Nodo (234)
-v2 = Nodo (875, v3)
-v1 = Nodo (999, v2)
+v3 = Nodo ("Manzanas")
+v2 = Nodo ("Peras", v3)
+v1 = Nodo ("Bananas", v2)
 
 print(v1.dato)
 print(v2.dato)
