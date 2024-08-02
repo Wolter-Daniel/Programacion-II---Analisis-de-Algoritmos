@@ -27,8 +27,8 @@ class Linked_list (object):
 
     # Método para verificar si la estructura de datos esta vacia
 
-    def is_empety (self):
-        empety = "False" if self.prim == None else "True"
+    def is_empty (self):
+        empety = "True" if self.prim == None else "False"
         print(empety)
     
     # Metodo para mostrar lista.
@@ -61,3 +61,4 @@ linked_list.add_at_front("!")
 linked_list.add_at_front("!")
 linked_list.add_at_front("!")
 linked_list.print_list()
+linked_list.is_empty()
