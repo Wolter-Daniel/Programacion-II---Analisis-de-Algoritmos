@@ -3,7 +3,7 @@
     UCASAL. Lic.Ciencia de Datos.
     Alumno: Daniel Andres Wolter.
 '''
-class _Nodo (object):
+class Nodo (object):
 
     #Constructor
 
@@ -16,25 +16,24 @@ class _Nodo (object):
             print(nodo.dato)
             nodo = nodo.prox
 
-class _linked_list (Object):
+class Linked_list (object):
     def __init__ (self):
         self.prim = None
 
     # Método para agregar elementos en el frente de la linked list
 
-    def add_at_front(self, dato):
-        self.prim = _Nodo(data = dato, prox = self.prim)
+    def add_at_front(self, data):
+        self.prim = Nodo(dato = data, prox = self.prim)
 
     # Método para verificar si la estructura de datos esta vacia
 
     def is_empety (self):
-        return False if self.prim == None else True
-    
-    
+        empety = "False" if self.prim == None else "True"
+        print(empety)    
 
-v3 = _Nodo ("Manzanas")
-v2 = _Nodo ("Peras", v3)
-v1 = _Nodo ("Bananas", v2)
+v3 = Nodo ("Manzanas")
+v2 = Nodo ("Peras", v3)
+v1 = Nodo ("Bananas", v2)
 
 #Referencia del principio de la lista.
 
@@ -44,4 +43,12 @@ lista = v1
 #print(v2.dato)
 #print(v3.dato)
 
-_Nodo.verLista(lista)
+#_Nodo.verLista(lista)
+
+linked_list = Linked_list()
+
+linked_list.is_empety
+
+linked_list.add_at_front("Hola")
+
+linked_list.is_empety
