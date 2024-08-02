@@ -1,4 +1,5 @@
-'''Linked list nodo.
+'''
+    Linked list nodo.
     Practica Analisis de Algoritmos Computacionales.
     UCASAL. Lic.Ciencia de Datos.
     Alumno: Daniel Andres Wolter.
@@ -38,6 +39,35 @@ class Linked_list (object):
             else:
                 nodo.prox = Nodo(data) 
 
+    #Metodo para buscar elemento
+
+    def search_data (self, data):
+        nodo = self.prim
+        while nodo.prox:
+            if nodo.dato == data:
+                return nodo
+            else:
+                nodo = nodo.prox
+        else:
+            print("Dato no existente") 
+
+    #Metodo para eliminar un dato
+
+    def delete_nodo (self, data):
+        nodo = self.prim
+        prev = None
+        while nodo.prox:
+            if nodo.dato == data and prev == None:
+                self.prim = nodo.prox
+                return
+            elif nodo.dato != data:
+                prev = nodo
+                nodo = nodo.prox
+            else:
+                prev.prox = nodo.prox
+                return
+        else:
+            print("Dato no existente")
 
     # Método para verificar si la estructura de datos esta vacia
 
@@ -74,5 +104,11 @@ linked_list.add_at_end("Mundo")
 linked_list.add_at_end("!")
 linked_list.add_at_end("!")
 linked_list.add_at_end("!")
+linked_list.add_at_front("#")
 linked_list.print_list()
-linked_list.is_empty()
+
+#linked_list.is_empty()
+
+linked_list.delete_nodo("Hola")
+
+linked_list.print_list()
