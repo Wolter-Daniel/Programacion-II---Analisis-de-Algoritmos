@@ -22,8 +22,22 @@ class Linked_list (object):
 
     # Método para agregar elementos en el frente de la linked list
 
-    def add_at_front(self, data):
+    def add_at_front (self, data):
         self.prim = Nodo(dato = data, prox = self.prim)
+
+    # Metodo para agregar elementos al final de la lista
+
+    def add_at_end (self, data):
+        if self.prim == None:
+            self.add_at_front(data)
+            return
+        else:
+            nodo = self.prim
+            while nodo.prox:
+                nodo = nodo.prox
+            else:
+                nodo.prox = Nodo(data) 
+
 
     # Método para verificar si la estructura de datos esta vacia
 
@@ -55,10 +69,10 @@ lista = v1
 
 linked_list = Linked_list()
 
-linked_list.add_at_front("Hola")
-linked_list.add_at_front("Mundo")
-linked_list.add_at_front("!")
-linked_list.add_at_front("!")
-linked_list.add_at_front("!")
+linked_list.add_at_end("Hola")
+linked_list.add_at_end("Mundo")
+linked_list.add_at_end("!")
+linked_list.add_at_end("!")
+linked_list.add_at_end("!")
 linked_list.print_list()
 linked_list.is_empty()
