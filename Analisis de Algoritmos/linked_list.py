@@ -12,11 +12,6 @@ class Nodo (object):
         self.dato = dato
         self.prox = prox
 
-    def verLista (nodo):
-        while nodo:
-            print(nodo.dato)
-            nodo = nodo.prox
-
 class Linked_list (object):
     '''Craer un objeto de tipo lista enlazada'''
     def __init__ (self):
