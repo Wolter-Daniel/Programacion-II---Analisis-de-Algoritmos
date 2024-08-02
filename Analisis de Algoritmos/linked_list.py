@@ -20,8 +20,12 @@ v3 = Nodo ("Manzanas")
 v2 = Nodo ("Peras", v3)
 v1 = Nodo ("Bananas", v2)
 
+#Referencia del principio de la lista.
+
+lista = v1 
+
 #print(v1.dato)
 #print(v2.dato)
 #print(v3.dato)
 
-Nodo.verLista(v1)
+Nodo.verLista(lista)
