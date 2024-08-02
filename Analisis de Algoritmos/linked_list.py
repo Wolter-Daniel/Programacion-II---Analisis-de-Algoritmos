@@ -123,5 +123,3 @@ print(linked_list.length())
 #linked_list.is_empty()
 #linked_list.delete_nodo("Hola")
 #linked_list.print_list()
-
-Linked_list.
