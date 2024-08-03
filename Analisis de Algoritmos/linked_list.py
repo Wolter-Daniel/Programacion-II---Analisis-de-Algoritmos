@@ -93,30 +93,3 @@ class Linked_list (object):
             return count
         else:
             print("Lista vacia")
-
-v3 = Nodo ("Manzanas")
-v2 = Nodo ("Peras", v3)
-v1 = Nodo ("Bananas", v2)
-
-#Referencia del principio de la lista.
-
-lista = v1 
-
-#print(v1.dato)
-#print(v2.dato)
-#print(v3.dato)
-
-#_Nodo.verLista(lista)
-
-linked_list = Linked_list()
-linked_list.add_at_end("Hola")
-linked_list.add_at_end("Mundo")
-linked_list.add_at_end("!")
-linked_list.add_at_end("!")
-linked_list.add_at_end("!")
-linked_list.add_at_front("#")
-linked_list.print_list()
-print(linked_list.length())
-#linked_list.is_empty()
-#linked_list.delete_nodo("Hola")
-#linked_list.print_list()
