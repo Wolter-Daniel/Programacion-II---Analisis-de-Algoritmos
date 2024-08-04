@@ -19,8 +19,6 @@ class Double_linked_list (object):
     def add_at_front (self, data):
         '''Insertar elemento al comienzo de la lista'''
         new_nodo = Nodo(dato = data, prev = None, prox = self.prim)
-        if self.prim != None:
-            self.prim.prev = new_nodo
         self.prim = new_nodo
         if self.last == None:
             self.last = self.prim
