@@ -20,8 +20,8 @@ class Circular_linked_list (object):
         '''Insertar elemento al comienzo de la lista'''
         new_nodo = Nodo(dato = data)
         if self.prim == None:
-            new_nodo.prev = self.prim
-            new_nodo.prox = self.prim
+            new_nodo.prev = new_nodo
+            new_nodo.prox = new_nodo
             self.prim = new_nodo
             self.last = new_nodo
 
@@ -31,16 +31,33 @@ class Circular_linked_list (object):
             self.prim.prev = new_nodo
             self.last.prox = new_nodo
             self.prim = new_nodo
+
+    def add_at_end (self, data):
+        '''Insertar elemento al final de la lista'''
+        new_nodo = Nodo(dato = data)
+
+        if self.prim == None:
+            new_nodo.prev = new_nodo
+            new_nodo.prox = new_nodo
+            self.prim = new_nodo
+            self.last = new_nodo
+
+        if self.prim != None:
+            new_nodo.prev = self.last
+            new_nodo.prox = self.prim
+            self.last.prox = new_nodo
+            self.prim.prev = new_nodo
+            self.last = new_nodo
             
 
     def print_list (self):
         if self.prim != None:
             nodo = self.prim
             while nodo != self.last:
-                print("Dato: ", nodo)
+                print("Dato: ", nodo.dato)
                 nodo = nodo.prox
             else:
-                print("Dato:",nodo)
+                print("Dato:",nodo.dato)
 
     def print_revert_list (self):
         if self.prim != None:
