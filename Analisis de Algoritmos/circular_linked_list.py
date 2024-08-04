@@ -17,11 +17,21 @@ class Circular_linked_list (object):
         self.last = None
 
     def add_at_front (self, data):
-        new_nodo = Nodo(dato= data, prev = self.last, prox = self.prim)
-        self.prim = new_nodo
+        '''Insertar elemento al comienzo de la lista'''
+        new_nodo = Nodo(dato = data)
+        if self.prim == None:
+            new_nodo.prev = self.prim
+            new_nodo.prox = self.prim
+            self.prim = new_nodo
+            self.last = new_nodo
 
-        if self.last == None:
-            self.last = self.prim
+        if self.prim != None:
+            new_nodo.prev = self.last
+            new_nodo.prox = self.prim
+            self.prim.prev = new_nodo
+            self.last.prox = new_nodo
+            self.prim = new_nodo
+            
 
     def print_list (self):
         if self.prim != None:
@@ -33,19 +43,10 @@ class Circular_linked_list (object):
                 print("Dato:",nodo.dato)
 
     def print_revert_list (self):
-         if self.prim != None:
+        if self.prim != None:
             nodo = self.last
             while nodo != self.prim:
                 print("Dato: ", nodo.dato)
                 nodo = nodo.prev
             else:
                 print("Dato:",nodo.dato)
-
-linked_list = Circular_linked_list()
-linked_list.add_at_front("Hola")
-linked_list.add_at_front("Mundo")
-linked_list.add_at_front("!")
-linked_list.add_at_front("!")
-linked_list.add_at_front("!")
-linked_list.add_at_front("#")
-linked_list.print_list()
