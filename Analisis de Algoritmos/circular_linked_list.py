@@ -37,10 +37,10 @@ class Circular_linked_list (object):
         if self.prim != None:
             nodo = self.prim
             while nodo != self.last:
-                print("Dato: ", nodo.dato)
+                print("Dato: ", nodo)
                 nodo = nodo.prox
             else:
-                print("Dato:",nodo.dato)
+                print("Dato:",nodo)
 
     def print_revert_list (self):
         if self.prim != None:
@@ -50,3 +50,46 @@ class Circular_linked_list (object):
                 nodo = nodo.prev
             else:
                 print("Dato:",nodo.dato)
+
+    def search (self, data):
+        if self.prim != None:
+            nodo = self.prim
+            while nodo != self.last:
+                if nodo.dato == data:
+                    print("Encontrado!!")
+                    return nodo.dato
+                else:
+                    nodo = nodo.prox
+            else:
+                print("El dato no existe!!!")
+                return
+
+    def delete (self, data):
+        '''Metodo para eliminar un dato'''
+        nodo = self.prim
+
+        while nodo:
+            if nodo.dato == data:
+                if nodo == self.prim:
+                    self.prim = nodo.prox
+                    if self.prim != None:
+                        self.prim.prev = self.last
+                    else:
+                        self.last = None
+
+                elif nodo == self.last:
+                    self.last = nodo.prev
+                    if self.last != None:
+                        self.last.prox = self.prim
+                    else:
+                        self.prim = None
+
+                else:
+                    nodo.prev.prox = nodo.prox
+                    nodo.prox.prev = nodo.prev
+                    print("Dato Borrado")
+                    return
+            else:
+                nodo = nodo.prox 
+        else:
+            print("Dato no existente")
