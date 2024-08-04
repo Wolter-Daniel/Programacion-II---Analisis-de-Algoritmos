@@ -1,3 +1,9 @@
+'''
+    Linked list.
+    Practica Analisis de Algoritmos Computacionales.
+    UCASAL. Lic.Ciencia de Datos.
+    Alumno: Daniel Andres Wolter.
+'''
 class Nodo (object):
     def __init__ (self, dato = None, prev = None, prox = None ):
         self.dato = dato
