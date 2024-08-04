@@ -15,3 +15,13 @@ class Circular_linked_list (object):
     def __init__(self):
         self.prim = None
         self.last = None
+
+    def add_at_front (self, data):
+        new_nodo = Nodo(dato= data, prev = self.last, prox = self.prim)
+        if self.prim != None:
+            self.prim = new_nodo
+        self.prim = new_nodo
+
+        if self.last == None:
+            self.last = self.prim
+
