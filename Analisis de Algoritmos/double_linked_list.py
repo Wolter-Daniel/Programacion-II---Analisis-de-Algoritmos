@@ -28,6 +28,36 @@ class Double_linked_list (object):
             self.last.prox = new_nodo
         self.last = new_nodo
 
+    def search (self, data):
+        if self.prim != None:
+            nodo = self.prim
+            while nodo:
+                if nodo.dato == data:
+                    return nodo.dato
+                else:
+                    nodo = nodo.prox
+            else:
+                print("El dato no existe!!!")
+                return
+
+    def delete (self, data):
+        if self.prim != None:
+            nodo = self.prim
+            nodo_prev = None 
+            while nodo:
+                if nodo.dato == data and nodo_prev == None:
+                    self.prim = nodo.prox
+                    return
+                elif nodo.dato == data:
+                    nodo_prev.prox = nodo.prox
+                nodo_prev = nodo
+                nodo = nodo.prox
+            else:
+               print('El dato a borrar no existe')
+               return
+        else:
+            print("No hay elementos en la lista")
+
     def print_list (self):
             '''Metodo para mostrar lista.'''
             nodo = self.prim
