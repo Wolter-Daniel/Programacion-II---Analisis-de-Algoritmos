@@ -15,11 +15,18 @@ class Double_linked_list (object):
         new_nodo = Nodo(dato = data, prev = None, prox = self.prim)
         if self.prim != None:
             self.prim.prev = new_nodo
-        else:
-            self.prim = new_nodo
+        self.prim = new_nodo
         if self.last == None:
             self.last = self.prim
           
+    def add_at_end (self, data):
+        new_nodo = Nodo (dato = data, prev = self.last, prox = None)
+        if self.prim == None:
+              self.add_at_front(data)
+              return
+        else:
+            self.last.prox = new_nodo
+        self.last = new_nodo
 
     def print_list (self):
             '''Metodo para mostrar lista.'''
@@ -34,3 +41,4 @@ class Double_linked_list (object):
             while nodo != None :
                 print("Dato:", nodo.dato)
                 nodo = nodo.prev
+
