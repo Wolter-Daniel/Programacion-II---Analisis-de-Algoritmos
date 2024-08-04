@@ -72,3 +72,13 @@ class Double_linked_list (object):
                 print("Dato:", nodo.dato)
                 nodo = nodo.prev
 
+    def length (self):
+        if self.prim != None:
+            count = 0
+            nodo = self.prim
+            while nodo:
+                count += 1
+                nodo = nodo.prox
+            else:
+                count += 1
+                return count
