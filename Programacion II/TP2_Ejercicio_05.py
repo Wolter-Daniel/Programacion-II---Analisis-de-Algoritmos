@@ -8,7 +8,7 @@
 #una sola variable y mostrar el mensaje de bienvenida. 
 
 
-class TP2_Ejercio_ ():
+class TP2_Ejercio_05 ():
     def main():
         nombre = input("Ingrese su nombre:")
         apellido = input("Ingrese su apellido:")
@@ -16,4 +16,4 @@ class TP2_Ejercio_ ():
         print("¡¡¡Bienvenido", nombre_completo, "!!!")
 
 if __name__ == "__main__":
-    TP2_Ejercio_.main()
+    TP2_Ejercio_05.main()
