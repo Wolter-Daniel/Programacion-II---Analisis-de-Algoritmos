@@ -7,7 +7,7 @@
 #Solicitar al usuario el ingreso de dos números, calcular y mostrar el promedio de 
 #ambos valores.
 
-class TP2_Ejercio_ ():
+class TP2_Ejercio_06 ():
     def main():
         print("Calcularemos el promedio entre dos numeros")
         num1 = int(input("Ingrese un numero: "))
@@ -17,4 +17,4 @@ class TP2_Ejercio_ ():
 
 
 if __name__ == "__main__":
-    TP2_Ejercio_.main()
+    TP2_Ejercio_06.main()
