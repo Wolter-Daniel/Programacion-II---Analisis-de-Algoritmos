@@ -13,26 +13,20 @@ class TP2_Ejercio_03 ():
     def main():
         print("Calculadora basica")
         num1 = int(input("Ingrese un numero entero: "))
-        operador = input("Ingrese la operacion a realizar (+, -, * , /): ")
         num2 = int(input("Ingrese el segundo numero: "))
-        if operador == "+":
-            resultado = num1 + num2
-        elif operador == "-":
-            resultado = num1 - num2
-        elif operador == "*":
-            resultado = num1 * num2
-        elif operador == "/":
-            if num2 == 0:
-                print("No es posible la division por 0")
-                return
-            else:
-                resultado = num1 / num2
+        suma = num1 + num2
+        resta = num1 - num2
+        producto = num1 * num2
+    
+        if num2 == 0:
+            print("No es posible la division por 0")
         else:
-            print("El operador no es valido :(")
-            return
+            division = num1 / num2
+            print ("La division de", num1, "/", num2, "=", division)
         
-        print (num1, operador, num2, "=", resultado)
-        return
+        print ("La suma de", num1, "+", num2, "=", suma)
+        print ("La resta de", num1, "-", num2, "=", resta)
+        print ("El producto de", num1, "*", num2, "=", producto)
 
 if __name__ == "__main__":
     TP2_Ejercio_03.main()
